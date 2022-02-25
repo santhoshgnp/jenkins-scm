@@ -1,0 +1,19 @@
+
+def name = 'pipeline'
+pipeline {
+    agent any
+
+    stages {
+        stage('TEST') {
+            steps {
+                echo 'Hello test'
+            }
+        }
+        
+         stage('BUILD') {
+            steps {
+                echo "hello build ${name}"
+            }
+        }
+    }
+}
